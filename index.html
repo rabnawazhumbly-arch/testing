@@ -18,6 +18,7 @@
             padding: 0;
             margin: 0;
             overflow: hidden;
+            overscroll-behavior: none;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -52,15 +53,15 @@
     <script>
         const hideFullScreenButton = "";
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/Flight Simulator.loader.js";
+        const loaderUrl = buildUrl + "/Baby Amusement Park.loader.js";
         const config = {
-            dataUrl: buildUrl + "/Flight Simulator.data.br",
-            frameworkUrl: buildUrl + "/Flight Simulator.framework.js.br",
-            codeUrl: buildUrl + "/Flight Simulator.wasm.br",
+            dataUrl: buildUrl + "/Baby Amusement Park.data.br",
+            frameworkUrl: buildUrl + "/Baby Amusement Park.framework.js.br",
+            codeUrl: buildUrl + "/Baby Amusement Park.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-            companyName: "Trimax007",
-            productName: "Pilot Flight Simulator Game 3D",
-            productVersion: "2.0"
+            companyName: "Humbly Tech",
+            productName: "Naughty Baby Amusement Park 3D",
+            productVersion: "1.1"
         };
 
         const container = document.querySelector("#unity-container");
@@ -87,11 +88,11 @@
 
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             container.className = "unity-mobile";
-            
+            config.devicePixelRatio = 1.3;
         }
 
         // The background image when loading the game. When building a build, the code changes depending on the project settings.
-        
+        loadingCover.style.background = "url('Images/background.png') center / cover";
         loadingCover.style.display = "";
 
         let StartUnityInstance;
@@ -309,7 +310,7 @@
         }
 
         // Additional script modules
-LogStyledMessage('[PluginYG2 v2.007] [Build: 5] [Platform: YandexGames]');
+LogStyledMessage('[PluginYG2 v2.008] [Build: 7] [Platform: YandexGames]');
 
 
 function StickyAdActivity(show) {
